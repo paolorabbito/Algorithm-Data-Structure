@@ -30,3 +30,9 @@ func heapSort(heap *[]int, dim int) {
 		maxHeapify(heap, 0, i)
 	}
 }
+
+func extractMax(heap *[]int, dim int) int {
+	(*heap)[0], (*heap)[dim-1] = (*heap)[dim-1], (*heap)[0]
+	maxHeapify(heap, 0, dim-1)
+	return (*heap)[dim-1]
+}

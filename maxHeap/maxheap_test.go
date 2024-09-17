@@ -19,3 +19,9 @@ func TestHeapSort(t *testing.T) {
 	heapSort(&heap, len(heap))
 	t.Log(heap)
 }
+
+func TestExtractMax(t *testing.T) {
+	heap := []int{321, 2, 31, 45, 3, 6, 22, 8, 49, 10}
+	t.Log(extractMax(&heap, len(heap)))
+	t.Log(heap)
+}
